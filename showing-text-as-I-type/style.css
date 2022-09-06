@@ -1,0 +1,19 @@
+.container{
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    border: solid;
+    width: 600px;
+    height: 300px;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    font-size: large;
+}
+
+#one{
+    margin-top: 50px;
+}
