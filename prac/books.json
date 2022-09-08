@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Chess Grandmaster",
+        "author": "V Anand",
+        "price": 500
+    },
+    {
+        "title":"JS by XYZ",
+        "author": "Anonymous",
+        "price": 400
+    },
+    {
+        "title": "Programming in C",
+        "author": "awfawfaw",
+        "price": 1000
+    }
+]

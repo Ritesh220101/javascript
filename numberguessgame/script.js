@@ -18,31 +18,33 @@ function guessTheNumber() {
     console.log(buttons);
     const para = document.querySelector("p");
     console.log(para);
-    for (let numberOfAttempts = 1; numberOfAttempts <= 6; numberOfAttempts += 1) {  
-        let count = 0;
-        for (let i = 0; i < 40; i++) {
-            buttons[i].addEventListener("click", e => {
-                if (buttons[i].id < randomNumber) {
-                    buttons[i].setAttribute("class", "yellow");
-                    count += 1;
+    let turns = 6;
+    let count = 0;
+    if(turns>0){
+        buttons.forEach(button=>{
+            button.addEventListener("click",e=>{
+                turns=turns-1;
+                count=count+1;
+                if(turns==0){
+                    button.id == randomNumber;
+                    buttons.forEach(button=>button.disabled=true);
+                    para.innerText = `Turns are over`;
                 }
-                if (buttons[i].id > randomNumber) {
-                    buttons[i].setAttribute("class", "red");
-                    count += 1;
+                if(button.id<randomNumber){
+                    button.setAttribute("class","yellow");
                 }
-                if (buttons[i].id == randomNumber) {
-                    buttons[i].setAttribute("class", "green");
-                    count += 1;
+                if(button.id>randomNumber){
+                    button.setAttribute("class","red");
+                }
+                if(button.id==randomNumber){
+                    button.setAttribute("class","green");
+                    buttons.forEach(button=>button.disabled=true);
                     para.innerText = `You have guessed the correct number in ${count} turns`;
-                    let b = document.getElementsByClassName("but");
-                    for (let i = 0; i < b.length; i++) {
-                        b[i].disabled = true;
-                    }
-                }
+                }       
+                // para.innerText = `Turns: ${turns}`;
             })
-        }
-        
+        })
     }
 }
-guessTheNumber();
 
+guessTheNumber();

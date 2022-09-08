@@ -1,0 +1,41 @@
+.container{
+    margin: auto;
+    text-align: center;
+}
+
+#name{
+    margin: 20px 0px 10px 0px;
+    
+}
+
+#age{
+    margin: 10px 0px 10px 0px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+button{
+    margin: 10px;
+    height: 40px;
+    padding: 10px;
+    background-color: #4cc9f0;
+}
+
+
+#session-storage{
+    margin: auto;
+    width: 300px;
+    border: solid;
+    height: auto;
+    text-align: left;
+    padding: 50px 0px 50px 100px;
+}
+
+hr{
+    margin-bottom: 30px;
+}
